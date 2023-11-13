@@ -1,6 +1,18 @@
 # mpi-utils: Use MPI in Shell
 
-## Introduction
+This package enables MPI semantics in shell scripting.
+
+## Install
+```
+$ sh autogen.sh
+
+$ ./configure --prefix=$HOME/bin
+
+$ make install
+
+```
+
+## Why
 MPI is the de-facto runtimes for parallel jobs in high performance computing (HPC). 
 However, its adoption outside the HPC community is very low. We think there may be
 following reasons.
