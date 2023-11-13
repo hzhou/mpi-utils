@@ -68,3 +68,42 @@ Hello MPI - 1 / 3
 Hello MPI - 0 / 3
 ```
 
+## Comparison with GNU Parallel
+
+####  GNU Parallel
+```
+$ paralell echo ::: `seq 0 7`
+0
+1
+2
+3
+4
+5
+6
+7
+```
+####  mpi-utils
+```
+$ echo t.sh
+rank=`mpi_comm_rank`
+echo $rank
+
+$ mpirun -n 8 sh t.sh
+0
+1
+2
+3
+4
+7
+5
+6
+```
+
+####  Discussion
+GNU Parallel launches individual programs that are not aware of each other.
+Each program is fed with different inputs and works independently.
+
+On the other hand, an mpi program is launched together by specifying the
+number of units. All units works in a single program logic.
+
+
