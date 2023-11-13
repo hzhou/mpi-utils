@@ -2,6 +2,11 @@
 
 This package enables MPI semantics in shell scripting.
 
+## Dependency
+* GNU Autotools
+* C compiler
+* An MPI runtime, e.g. MPICH or Open MPI (actually, just `mpirun`)
+
 ## Install
 ```
 $ sh autogen.sh
